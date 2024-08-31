@@ -61,6 +61,7 @@ header.shadow .header-social-link a {
   display: flex;
   align-items: center;
   gap: 30px;
+  /* gapnya entar di responsif GANTIIIIIII */
 }
 
 .logo h3 {
@@ -167,6 +168,86 @@ header.shadow .header-social-link a {
   transition: color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .header-container {
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .logo {
+      position: absolute;
+      left: 80%; /* Menggeser logo lebih ke kanan */
+      transform: translateX(-65%);
+  }
+
+  #menu-icon {
+      font-size: 22px;
+      display: block;
+  }
+
+  .nav-link {
+      padding: 10px;
+      gap: 10px; /* Mengurangi gap antar elemen */
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .nav-link.show {
+      max-height: 200px;
+      opacity: 1;
+  }
+
+  .nav-link li {
+      margin-bottom: 8px;
+  }
+
+  .nav-link a {
+      font-size: 12px; /* Mengurangi ukuran font */
+  }
+
+  .dropdown-content {
+    display: none;
+    position: relative;
+    left: 0;
+    padding: 6px;
+    box-shadow: none;
+    margin-bottom: -1.2rem;
+  }
+
+  .dropdown-content a {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: transparent;
+  }
+
+  .chevron-icon {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+
+  .social-link a {
+      font-size: 14px; /* Mengurangi ukuran ikon sosial */
+      position: absolute;
+      transform: translateY(-50%); /* Untuk memastikan elemen berada di tengah secara vertikal */
+      display: flex;
+      gap: 10px; /* Mengatur jarak antar ikon */
+  }
+
+  .header-social-link a {
+    font-size: 14px; /* Mengurangi ukuran ikon sosial */
+    position: absolute;
+    transform: translateY(-50%); /* Untuk memastikan elemen berada di tengah secara vertikal */
+    display: flex;
+    gap: 10px; /* Mengatur jarak antar ikon */
+  }
+}
+
 @media (max-width: 950px) {
   .header-container {
       padding: 0 15px;
@@ -184,6 +265,10 @@ header.shadow .header-social-link a {
   }
 
   .social-link a {
+      color: var(--color-black); 
+  }
+
+  .header-social-link a {
       color: var(--color-black); 
   }
 
@@ -532,7 +617,7 @@ home{
   }
 
   .home-left {
-      transform: translateY(10rem) translateX(5%); /* Menggeser ke bawah dan ke kanan */
+      /* transform: translateY(13rem) translateX(0%); Menggeser ke bawah dan ke kanan */
       margin-bottom: 0; /* Menghilangkan margin-bottom */
       position: relative;
   }
@@ -546,11 +631,12 @@ home{
   }
 
   .home-right {
-      width: 250px;
+      /* width: 250px;
       height: 300px;
       transform: rotate(45deg);
       right: 0;
-      margin: 0 auto;
+      margin: 0 auto; */
+      display: none;
   }
 
   .sq-box img {
@@ -569,8 +655,12 @@ home{
   .sq-box, .sq-box2 {
       display: none; /* Hide boxes on small screens */
   }
-}
 
+  .btn, .btn-1 {
+    padding: 8px 18px; /* Kurangi lagi padding untuk layar lebih kecil */
+    font-size: 60%; /* Sesuaikan lagi ukuran font */
+}
+}
 
 @media (max-width: 480px) {
   .home-left h1, .home-left h3 {
