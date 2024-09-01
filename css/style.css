@@ -775,7 +775,7 @@ home{
 /* Untuk layar kecil seperti smartphone */
 @media (max-width: 768px) {
   .about {
-    margin-top: -12rem;
+    margin-top: -5rem;
     padding: 1rem 0; /* Mengurangi padding atas dan bawah */
     text-align: center; /* Pusatkan semua teks */
   }
@@ -821,7 +821,7 @@ home{
   }
 
   .about-btn {
-    font-size: 0.9rem; /* Menyesuaikan ukuran font untuk tombol */
+    font-size: 20%; /* Menyesuaikan ukuran font untuk tombol */
     padding: 10px 18px; /* Menyesuaikan padding pada tombol */
     margin-top: 1rem; /* Jarak atas tetap sama */
     text-align: center; /* Pusatkan teks tombol */
@@ -866,7 +866,7 @@ home{
     }
   
     .about-btn {
-      font-size: 1rem; /* Menyesuaikan ukuran font untuk tombol */
+      font-size: 80%; /* Menyesuaikan ukuran font untuk tombol */
       padding: 12px 20px; /* Padding tetap sama */
     }
   }
