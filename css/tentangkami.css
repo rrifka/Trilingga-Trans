@@ -1,0 +1,145 @@
+.about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 4rem; /* Menambahkan margin-top untuk mendorong bagian ke bawah */
+}
+
+.about-us-heading {
+    opacity: 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    animation: fadeInUp 1s ease-out;
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+    animation-delay: 0s; /* Delay animasi untuk heading */
+}
+
+.about-us-intro,
+.about-us-text,
+.about-us-section,
+.about-us-list {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out; /* Terapkan animasi fadeInUp */
+    animation-fill-mode: both; /* Memastikan animasi tetap pada status akhir setelah selesai */
+}
+
+.about-us-intro {
+    animation-delay: 0.2s; /* Delay animasi untuk intro */
+}
+
+.about-us-text {
+    animation-delay: 0.4s; /* Delay animasi untuk teks */
+}
+
+.about-us-section {
+    animation-delay: 0.6s; /* Delay animasi untuk section */
+}
+
+.about-us-list {
+    animation-delay: 0.8s; /* Delay animasi untuk daftar */
+}
+
+.about-us-intro span,
+.about-us-text span {
+    font-weight: bold;
+}
+
+.about-us-intro,
+.about-us-text {
+    font-size: 1rem; /* Ukuran font untuk intro dan teks */
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.about-us-section {
+    font-size: 1.2rem; /* Ukuran font untuk section */
+    margin-top: 2rem; /* Margin atas untuk section */
+}
+
+.about-us-list {
+    margin-top: 2rem; /* Margin atas untuk daftar */
+    margin-bottom: 3rem; /* Margin bawah untuk daftar */
+    padding-left: 1.5rem; /* Padding untuk bullet points */
+}
+
+.about-us-list li {
+    font-size: 1rem; /* Ukuran font untuk item daftar */
+    margin-bottom: 0.5rem;
+    list-style-type: disc; /* Daftar berbulat */
+    list-style-position: outside; /* Bullet di luar kotak teks */
+    padding-left: 1.5rem; /* Padding untuk penyesuaian teks */
+}
+
+/* animasi */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Awal animasi dari posisi lebih rendah */
+    }
+    60% {
+        opacity: 0.7; /* Menambah opacity secara bertahap */
+        transform: translateY(-10px); /* Posisi lebih tinggi sebelum mencapai akhir */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Posisi akhir pada tempat semula */
+    }
+}
+
+/* responsif */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 15px;
+        margin-top: 2rem; /* Mengurangi margin-top untuk layar kecil */
+    }
+
+    .about-us-heading {
+        font-size: 1.8rem; /* Menyesuaikan ukuran font heading */
+    }
+
+    .about-us-intro,
+    .about-us-text {
+        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk intro dan teks */
+    }
+
+    .about-us-section {
+        font-size: 1rem; /* Menyesuaikan ukuran font untuk section */
+    }
+
+    .about-us-list {
+        padding-left: 1rem; /* Mengurangi padding untuk layar kecil */
+    }
+
+    .about-us-list li {
+        font-size: 0.9rem; /* Menyesuaikan ukuran font untuk item daftar */
+    }
+}
+
+@media (max-width: 1024px) {
+    .about-us {
+        padding: 20px;
+        margin-top: 3rem; /* Menyesuaikan margin-top untuk tablet */
+    }
+
+    .about-us-heading {
+        font-size: 2rem; /* Menyesuaikan ukuran font heading */
+    }
+
+    .about-us-intro,
+    .about-us-text {
+        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk intro dan teks */
+    }
+
+    .about-us-section {
+        font-size: 1.1rem; /* Menyesuaikan ukuran font untuk section */
+    }
+
+    .about-us-list {
+        padding-left: 1.25rem; /* Mengurangi padding untuk tablet */
+    }
+
+    .about-us-list li {
+        font-size: 0.95rem; /* Menyesuaikan ukuran font untuk item daftar */
+    }
+}
