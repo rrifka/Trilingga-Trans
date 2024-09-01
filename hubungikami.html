@@ -70,28 +70,43 @@
     <p>Butuh bantuan atau memiliki pertanyaan? Hubungi kami, kami akan dengan senang hati membantu Anda.</p>
     
     <div class="contactForm">
-        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="clearForm()">
-         <h1 class="sub-heading">Tinggalkan pesan</h1>
-         <input type="hidden" name="access_key" value="25f6e631-141d-499e-9a1e-b9ef6c9c0da2">
-         <input type="text" class="input" name="name" placeholder="Name" required>
-         <input type="email" class="input" name="email" placeholder="Email" required>
-         <input type="text" class="input" name="subject" placeholder="Subject" required>
-         <textarea class="input" name="message" cols="30" rows="5" placeholder="Your Message..." required></textarea>
-         <input type="submit" class="input submit" value="Send Message" style="color: white;">
+        <form action="https://api.web3forms.com/submit" method="POST" onsubmit="submitForm(event)">
+            <h1 class="sub-heading">Tinggalkan pesan</h1>
+            <input type="hidden" name="access_key" value="25f6e631-141d-499e-9a1e-b9ef6c9c0da2">
+            <input type="text" class="input" name="name" placeholder="Name" required>
+            <input type="email" class="input" name="email" placeholder="Email" required>
+            <input type="text" class="input" name="subject" placeholder="Subject" required>
+            <textarea class="input" name="message" cols="30" rows="5" placeholder="Your Message..." required></textarea>
+            <input type="submit" class="input submit" value="Send Message" style="color: white;">
         </form>
-
+        
         <script>
-            function clearForm() {
-                // Prevent form submission default behavior
-                event.preventDefault();
-
-                // Clear form fields
-                document.querySelector('input[name="name"]').value = '';
-                document.querySelector('input[name="email"]').value = '';
-                document.querySelector('input[name="subject"]').value = '';
-                document.querySelector('textarea[name="message"]').value = '';
+            function submitForm(event) {
+                event.preventDefault(); // Menghentikan pengiriman default
+        
+                // Melakukan pengiriman data form secara manual menggunakan fetch
+                fetch(event.target.action, {
+                    method: 'POST',
+                    body: new FormData(event.target)
+                })
+                .then(response => response.json())
+                .then(result => {
+                    // Jika pengiriman berhasil, form akan dibersihkan
+                    if(result.success){
+                        event.target.reset(); // Membersihkan form setelah submit
+                        alert('Form berhasil dikirim!');
+                    } else {
+                        alert('Terjadi kesalahan, silakan coba lagi.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Terjadi kesalahan, silakan coba lagi.');
+                });
             }
         </script>
+        
+        
 
         <div class="map-container">
             <h2>Temukan Kami</h2>

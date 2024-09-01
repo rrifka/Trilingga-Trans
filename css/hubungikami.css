@@ -54,8 +54,6 @@ form {
     font-size: .9rem;
     padding: 1em;
     outline: none;
-    background-color: var(--formBg);
-    color: var(--paraColor);
     border-radius: 10px;
     border: 1px solid var(--color-primary);
     margin-bottom: 1em;

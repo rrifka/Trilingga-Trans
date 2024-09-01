@@ -617,7 +617,7 @@ home{
   }
 
   .home-left {
-      margin-top: -8rem;
+      margin-top: -6rem;
       /* transform: translateY(13rem) translateX(0%); Menggeser ke bawah dan ke kanan */
       margin-bottom: 0; /* Menghilangkan margin-bottom */
       position: relative;
@@ -658,7 +658,7 @@ home{
   }
 
   .btn, .btn-1 {
-    padding: 8px 18px; /* Kurangi lagi padding untuk layar lebih kecil */
+    padding: 10px 20px; /* Kurangi lagi padding untuk layar lebih kecil */
     font-size: 80%; /* Sesuaikan lagi ukuran font */
 }
 }
