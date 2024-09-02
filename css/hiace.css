@@ -20,7 +20,7 @@ body {
     background: white;
 }
 
-.fortuner {
+.hiace {
     text-align: center;
     margin: 5rem auto;
 }
@@ -31,7 +31,7 @@ body {
     margin-bottom: 0.8rem;
 }
 
-.fortuner-container {
+.hiace-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,26 +48,26 @@ body {
     align-items: stretch;
 }
 
-.img-fortuner, .fortuner-details {
+.img-hiace, .hiace-details {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.img-fortuner {
+.img-hiace {
     border: 1px solid black;
     border-radius: 3px;
     padding: 20px;
 }
 
-.img-fortuner img {
+.img-hiace img {
     max-width: 100%;
     height: auto;
     border-radius: 3px;
 }
 
-.fortuner-details {
+.hiace-details {
     padding: 2rem;
     border: 1px solid black;
     border-radius: 3px;
@@ -77,25 +77,25 @@ body {
     align-items: center;
 }
 
-.fortuner-details h1 {
+.hiace-details h1 {
     font-size: 2rem;
     color: var(--color-black);
     margin-bottom: 0.5rem;
 }
 
-.fortuner-details h2 {
+.hiace-details h2 {
     color: var(--color-primary);
     font-size: 1.8rem;
     margin: 0;
 }
 
-.fortuner-details h2 span {
+.hiace-details h2 span {
     font-size: 1.3rem;
     color: #333;
     font-weight: 400;
 }
 
-.fortuner-details p {
+.hiace-details p {
     margin-top: 1rem;
     line-height: 1.6;
     text-align: center; 
@@ -207,12 +207,12 @@ body {
     }
 }
 
-.fortuner-container, .terms-container {
+.hiace-container, .terms-container {
     animation: fadeInUp 1s ease-out; 
     animation-fill-mode: both; 
 }
 
-.fortuner-container {
+.hiace-container {
     animation-delay: 0.4s; 
 }
 
@@ -220,25 +220,25 @@ body {
     animation-delay: 0.4s; 
 }
 
-.fortuner-container, .terms-container {
+.hiace-container, .terms-container {
     opacity: 0; 
     transform: translateY(20px); 
     transition: opacity 0.5s ease-out, transform 0.5s ease-out; 
 }
 
-.fortuner-container.animated, .terms-container.animated {
+.hiace-container.animated, .terms-container.animated {
     opacity: 1;
     transform: translateY(0);
 }
 
-.fortuner h1, .fortuner p {
+.hiace h1, .hiace p {
     animation: fadeInUp 1s ease-out;
     animation-fill-mode: both;
     opacity: 0; 
     transform: translateY(20px); 
 }
 
-.fortuner h1, .fortuner p {
+.hiace h1, .hiace p {
     animation-delay: 0.2s; 
 }
 
@@ -248,7 +248,7 @@ body {
         font-size: 2rem;
     }
 
-    .fortuner p {
+    .hiace p {
         padding: 10px;
         font-size: 1rem;
     }
@@ -258,12 +258,12 @@ body {
         margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
     }
 
-    .img-fortuner {
+    .img-hiace {
         width: 100%;
         padding: 10px; /* Mengurangi padding gambar */
     }
 
-    .fortuner-details {
+    .hiace-details {
         width: 100%;
         padding: 1rem;
     }
@@ -311,12 +311,12 @@ body {
         margin: 0 auto; /* Menjaga kotak tetap berada di tengah */
     }
 
-    .img-fortuner {
+    .img-hiace {
         width: 100%;
         padding: 15px; /* Mengurangi padding gambar */
     }
 
-    .fortuner-details {
+    .hiace-details {
         width: 100%;
         padding: 1.5rem;
     }
