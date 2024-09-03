@@ -73,6 +73,11 @@ form {
     font-weight: 600;
     cursor: pointer;
     width: 100%;
+    transition: transform 0.3s ease-in-out; /* Perbaikan pada properti transition */
+}
+
+.submit:hover {
+    transform: scale(1.05); /* Memperbesar ikon saat di-hover */
 }
 
 .map-container {
