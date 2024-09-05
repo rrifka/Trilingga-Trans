@@ -406,13 +406,13 @@ header.shadow .header-social-link a {
     font-size: 14px;
     margin-left: 8px;
     transition: transform 0.3s ease;
-}
+  }
 
-.chevron-icon.rotate {
-    transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
-}
+  .chevron-icon.rotate {
+      transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
+  }
 
-.dropdown-content {
+  .dropdown-content {
     display: none;
     left: 0;
     padding: 10px;
@@ -448,8 +448,6 @@ header.shadow .header-social-link a {
     }
 }
 
-
-
 /* @media(max-width:895px){
     #menu-icon{
         display: block;
@@ -481,7 +479,7 @@ header.shadow .header-social-link a {
 }
 /*-------------------- end of icon WhatsApp --------------------*/
 
-/* .......................Start Home Section...................... */
+/*-------------------- home --------------------*/
 home{
     width: 100;
     height: 100vh;
@@ -495,6 +493,7 @@ home{
     max-width: 620px;
     position: relative;
 }
+
 .home-left h1{
     font-size: 40px;
     line-height: 1.2;
@@ -508,6 +507,7 @@ home{
 .home-left span{
     color: var(--color-primary);
 }
+
 .home-left h3{
     font-size: 40px;
     font-weight: 400;
@@ -517,6 +517,7 @@ home{
     opacity: 0;    
     animation-delay: .8s;  
 }
+
 .home-left p{
     margin: 15px 0 30px;
     line-height: 150%;
@@ -525,6 +526,7 @@ home{
     opacity: 0;    
     animation-delay: .6s; 
 }
+
 .home-container{
     display: grid;
     grid-template-columns: auto auto;
@@ -532,6 +534,7 @@ home{
     height: 100%; 
     justify-content: space-between;
 }
+
 .home-right{
     position: relative;
     width: 400px;
@@ -539,6 +542,7 @@ home{
     transform: rotate(45deg);
     right: -7%;   
 }
+
 .btn{
     display: inline-block;
     width: fit-content;
@@ -581,6 +585,11 @@ home{
     font-size: 80%;
     transition: 0.3s ease-in-out;
 }
+
+.btn-1:hover {
+  transform: scale(1.05);
+}
+
 .sq-box{
     height: 100%;
     width: 100%;
@@ -591,6 +600,7 @@ home{
     animation: zoomOut 1s ease forwards; 
     animation-delay: 1.3s;
 }
+
 .sq-box img{
     position: absolute;
     transform: rotate(-45deg);
@@ -601,6 +611,7 @@ home{
     animation: carAni forwards 1s ease;
     animation-delay: 1.6s;
 }
+
 .sq-box2{
     position: absolute;
     width: 700px;
