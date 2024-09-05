@@ -9,13 +9,40 @@ window.addEventListener('scroll', () => {
     }
 });
 
-//dropdown
+//responsif menu
 const menuIcon = document.getElementById('menu-icon');
 const navLink = document.querySelector('.nav-link');
+
 
 menuIcon.addEventListener('click', () => {
     navLink.classList.toggle('show');
 });
+
+// responsif dropdown
+const dropdownItems = document.querySelectorAll('.nav-link li');
+
+dropdownItems.forEach(item => {
+    const link = item.querySelector('a');
+    const chevron = item.querySelector('.chevron-icon');
+    const dropdownContent = item.querySelector('.dropdown-content');
+
+    if (dropdownContent) {
+        // Event listener untuk link
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); // Mencegah link agar tidak berpindah halaman
+            dropdownContent.classList.toggle('open');
+            chevron.classList.toggle('rotate');
+        });
+
+        // Event listener untuk chevron-icon
+        chevron.addEventListener('click', (event) => {
+            event.preventDefault(); // Mencegah aksi default jika diperlukan
+            dropdownContent.classList.toggle('open');
+            chevron.classList.toggle('rotate');
+        });
+    }
+});
+
 
 const swiper = new Swiper(".swiper", {
     slidesPerView: 3,

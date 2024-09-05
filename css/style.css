@@ -280,27 +280,48 @@ header.shadow .header-social-link a {
       font-size: 12px; 
   }
 
-  .dropdown-content {
-    display: none;
-    position: relative;
-    left: 0;
-    padding: 6px;
-    box-shadow: none;
-    margin-bottom: -1.2rem;
-  }
-
-  .dropdown-content a {
-    font-size: 11px;
-    padding: 6px 10px;
-  }
-
-  .dropdown-content a:hover {
-    background-color: transparent;
-  }
-
   .chevron-icon {
-    font-size: 12px;
-    margin-left: 5px;
+    font-size: 14px;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.chevron-icon.rotate {
+    transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
+}
+
+.dropdown-content {
+    display: none;
+    left: 0;
+    padding: 10px;
+    box-shadow: none;
+    margin-bottom: -2rem;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-content a {
+  color: black; 
+  position: relative;
+  font-size: 15px;
+  padding: 8px 15px;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+
+}
+
+.dropdown-content.open {
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.dropdown-content a:hover {
+    color: var(--color-primary);
+    background-color: transparent; /* Nonaktifkan background-color di mode responsif */
   }
 
   .social-link a {
@@ -356,12 +377,14 @@ header.shadow .header-social-link a {
       max-height: 0; /* Tinggi awal 0 */
       opacity: 0; /* Menyembunyikan konten secara visual */
       overflow: hidden; /* Menyembunyikan konten saat height 0 */
+      pointer-events: none; /* Menonaktifkan klik saat disembunyikan */
       transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out;
   }
 
   .nav-link.show {
       max-height: 300px; /* Tinggi maksimal saat menu ditampilkan */
       opacity: 1; /* Menampilkan konten */
+      pointer-events: auto; /* Mengaktifkan klik saat ditampilkan */
   }
 
   .nav-link a {
@@ -373,43 +396,53 @@ header.shadow .header-social-link a {
       display: block;
   }
 
-  .dropdown-content {
-    display: none;
-    position: relative;
-    left: 0;
-    padding: 10px;
-    box-shadow: none; /* Nonaktifkan box-shadow di mode responsif */
-    margin-bottom: -2rem;
-  }
-
-  .dropdown-content.show {
-    display: block;
-    transform: translateY(0); 
-    opacity: 1;
-  }
-
-  .dropdown-content a {
-    color: black; 
-    font-size: 15px;
-    padding: 8px 15px;
-    text-align: center;
-    white-space: nowrap;
-    opacity: 0.8;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-  }
-
-  .dropdown-content a:hover {
-    color: var(--color-primary);
-    background-color: transparent; /* Nonaktifkan background-color di mode responsif */
-
-  }
-
   .chevron-icon {
     font-size: 14px;
     margin-left: 8px;
     transition: transform 0.3s ease;
+}
+
+.chevron-icon.rotate {
+    transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
+}
+
+.dropdown-content {
+    display: none;
+    left: 0;
+    padding: 10px;
+    box-shadow: none;
+    margin-bottom: -2rem;
+    transform: translateY(-10px);
+    opacity: 0;
+    pointer-events: none; /* Menonaktifkan klik saat disembunyikan */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.dropdown-content.open {
+    display: block;
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto; /* Mengaktifkan klik saat ditampilkan */
+}
+
+.dropdown-content a {
+  color: black; 
+  font-size: 15px;
+  padding: 8px 15px;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    color: var(--color-primary);
+    background-color: transparent; /* Nonaktifkan background-color di mode responsif */
   }
 }
+
+
 
 /* @media(max-width:895px){
     #menu-icon{
