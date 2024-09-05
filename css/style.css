@@ -284,42 +284,42 @@ header.shadow .header-social-link a {
     font-size: 14px;
     margin-left: 8px;
     transition: transform 0.3s ease;
-}
+  }
 
-.chevron-icon.rotate {
-    transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
-}
+  .chevron-icon.rotate {
+      transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
+  }
 
-.dropdown-content {
-    display: none;
-    left: 0;
-    padding: 10px;
-    box-shadow: none;
-    margin-bottom: -2rem;
-    transform: translateY(-10px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
+  .dropdown-content {
+      display: none;
+      left: 0;
+      padding: 10px;
+      box-shadow: none;
+      margin-bottom: -2rem;
+      transform: translateY(-10px);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+  }
 
-.dropdown-content a {
-  color: black; 
-  position: relative;
-  font-size: 15px;
-  padding: 8px 15px;
-  text-align: center;
-  white-space: nowrap;
-  opacity: 0.8;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+  .dropdown-content a {
+    color: black; 
+    position: relative;
+    font-size: 15px;
+    padding: 8px 15px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
 
-}
+  }
 
-.dropdown-content.open {
-    display: block;
-    transform: translateY(0);
-    opacity: 1;
-}
+  .dropdown-content.open {
+      display: block;
+      transform: translateY(0);
+      opacity: 1;
+  }
 
-.dropdown-content a:hover {
+  .dropdown-content a:hover {
     color: var(--color-primary);
     background-color: transparent; /* Nonaktifkan background-color di mode responsif */
   }
@@ -416,30 +416,30 @@ header.shadow .header-social-link a {
     opacity: 0;
     pointer-events: none; /* Menonaktifkan klik saat disembunyikan */
     transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.dropdown-content.open {
-    display: block;
-    position: relative;
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto; /* Mengaktifkan klik saat ditampilkan */
-}
-
-.dropdown-content a {
-  color: black; 
-  font-size: 15px;
-  padding: 8px 15px;
-  text-align: center;
-  white-space: nowrap;
-  opacity: 0.8;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    color: var(--color-primary);
-    background-color: transparent; /* Nonaktifkan background-color di mode responsif */
   }
+
+  .dropdown-content.open {
+      display: block;
+      position: relative;
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto; /* Mengaktifkan klik saat ditampilkan */
+  }
+
+  .dropdown-content a {
+    color: black; 
+    font-size: 15px;
+    padding: 8px 15px;
+    text-align: center;
+    white-space: nowrap;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+  }
+
+  .dropdown-content a:hover {
+      color: var(--color-primary);
+      background-color: transparent; /* Nonaktifkan background-color di mode responsif */
+    }
 }
 
 
@@ -1503,6 +1503,11 @@ home{
 .find-us ul li i {
   font-size: 20px; /* Ukuran ikon */
   margin-right: 10px; /* Jarak antara ikon dan teks */
+  transition: transform 0.3s ease-in-out; /* Menambahkan transisi halus */
+}
+
+.find-us ul li i:hover {
+  transform: scale(1.15); 
 }
 
 .find-us ul li p {
@@ -1565,12 +1570,11 @@ home{
   display: inline-block;
   position: relative; /* Memastikan pseudo-element terposisi relatif terhadap ikon */
   z-index: 1; /* Menempatkan ikon di atas lingkaran */
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Menambahkan transisi halus */
+  transition: transform 0.3s ease-in-out; /* Menambahkan transisi halus */
 }
 
 .icons-grid a:hover {
-  transform: scale(1.05); /* Memperbesar ikon saat di-hover */
-  color: #393E46; /* Warna ikon saat di-hover (jika diperlukan) */
+  transform: scale(1.15); /* Memperbesar ikon saat di-hover */
 }
 
 .icons-grid a::before {
