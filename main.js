@@ -43,24 +43,6 @@ dropdownItems.forEach(item => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Menangkap semua elemen dengan chevron-icon
-    const dropdownToggles = document.querySelectorAll('.chevron-icon');
-
-    dropdownToggles.forEach(icon => {
-      icon.addEventListener('click', function () {
-        // Toggle kelas 'rotate' pada ikon chevron saat diklik
-        icon.classList.toggle('rotate');
-        
-        // Optional: toggle konten dropdown di bawah ikon
-        const dropdownContent = icon.parentElement.nextElementSibling;
-        if (dropdownContent) {
-          dropdownContent.classList.toggle('open'); // Toggle buka tutup dropdown
-        }
-      });
-    });
-  });
-
 
 const swiper = new Swiper(".swiper", {
     slidesPerView: 3,

@@ -153,17 +153,6 @@ header.shadow .header-social-link a {
     transform: rotate(180deg);
 } */
 
-.nav-link li:hover .chevron-icon {
-  transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
-  transition: transform 0.3s ease; /* Transisi halus untuk rotasi */
-}
-
-.nav-link li .chevron-icon {
-  transform: rotate(0); /* Pastikan ikon default tidak berputar */
-  transition: transform 0.3s ease; /* Transisi untuk mengembalikan ke posisi semula */
-}
-
-
 .nav-link li:hover > a,
 .nav-link li:hover .chevron-icon,
 .nav-link li:hover {
@@ -303,9 +292,8 @@ header.shadow .header-social-link a {
     transition: transform 0.3s ease;
   }
 
-  .nav-link li .chevron-icon {
-    transition: transform 0.3s ease;
-    transform: rotate(0); /* Pastikan rotasi tidak aktif di hover */
+  .chevron-icon.rotate {
+      transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
   }
 
   .dropdown-content {
@@ -420,9 +408,8 @@ header.shadow .header-social-link a {
     transition: transform 0.3s ease;
   }
 
-  .nav-link li .chevron-icon {
-    transition: transform 0.3s ease;
-    transform: rotate(0); /* Pastikan rotasi tidak aktif di hover */
+  .chevron-icon.rotate {
+      transform: rotate(180deg); /* Ikon akan berputar 180 derajat */
   }
 
   .dropdown-content {
