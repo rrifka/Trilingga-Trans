@@ -147,11 +147,11 @@ header.shadow .header-social-link a {
   transition: color 0.4s ease;
 }
 
-/* CSS untuk menampilkan ikon chevron saat dropdown terbuka
+/* CSS untuk menampilkan ikon chevron saat dropdown terbuka */
 .nav-link li:hover .chevron-icon,
 .nav-link li .open + .chevron-icon {
     transform: rotate(180deg);
-} */
+}
 
 .nav-link li:hover > a,
 .nav-link li:hover .chevron-icon,
